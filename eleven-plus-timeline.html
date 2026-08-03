@@ -21,10 +21,45 @@
   h1.title{font-family:'Fraunces', serif; font-weight:600; font-size:clamp(32px,5.5vw,52px); line-height:1.02; margin:0 0 8px; letter-spacing:-0.01em;}
   h1.title em{font-style:italic; font-weight:500; color:var(--brass);}
   .subline{font-size:15px; color:var(--ink-soft); max-width:580px; margin:0 auto; line-height:1.55;}
-  .site-nav{margin-top:18px; font-family:'IBM Plex Mono', monospace; font-size:12.5px;}
-  .site-nav a{text-decoration:none; color:var(--ink-soft);}
-  .site-nav a.nav-current{color:var(--ink); border-bottom:1.5px solid var(--brass); padding-bottom:2px;}
-  .nav-sep{margin:0 10px; color:var(--line);}
+  .site-nav{
+    margin-top:18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
+}
+
+.site-nav a{
+    text-decoration:none;
+    color:var(--ink-soft);
+}
+
+.site-nav a.nav-current{
+    color:var(--ink);
+    border-bottom:1.5px solid var(--brass);
+    padding-bottom:2px;
+}
+
+.nav-heading{
+    color:var(--brass);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:11px;
+    font-weight:600;
+}
+
+.nav-group{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.nav-sep{
+    color:var(--line);
+}
 
   main{position:relative; z-index:1; max-width:720px; margin:0 auto; padding:40px 24px 60px;}
 
