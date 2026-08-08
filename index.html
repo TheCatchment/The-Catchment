@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Catchment — Clear, Independent Guidance for Ruislip, Eastcote &amp; Harrow Families</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2b44; --ink-soft:#3a4a63; --paper:#efead8; --paper-raised:#f7f4e9;
+    --brass:#a9812e; --brass-dim:#c9a75a; --brick:#8b3a3a; --green:#3d5c3a; --line: rgba(28,43,68,0.16);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; -webkit-font-smoothing:antialiased;}
+  body::before{content:""; position:fixed; inset:0; background-image:radial-gradient(circle at 1px 1px, rgba(28,43,68,0.05) 1px, transparent 0); background-size:22px 22px; pointer-events:none; z-index:0;}
+  a{color:var(--ink);}
+
+  header.masthead{position:relative; z-index:1; border-bottom:3px solid var(--ink); padding:52px 24px 40px; text-align:center;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--brick); margin-bottom:14px;}
+  .wordmark{font-family:'Fraunces', serif; font-weight:600; font-size:22px; letter-spacing:-0.01em; margin-bottom:28px;}
+  .wordmark em{font-style:italic; font-weight:500; color:var(--brass);}
+  h1.title{font-family:'Fraunces', serif; font-weight:600; font-size:clamp(32px,5.5vw,54px); line-height:1.08; margin:0 auto 18px; letter-spacing:-0.01em; max-width:800px;}
+  h1.title em{font-style:italic; font-weight:500; color:var(--brass);}
+  .subline{font-size:16px; color:var(--ink-soft); max-width:620px; margin:0 auto 10px; line-height:1.6;}
+  .tagline{font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.05em; color:var(--brass); margin-top:14px;}
+  .site-nav{margin-top:26px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.03em;}
+  .site-nav a{text-decoration:none; color:var(--ink-soft); padding-bottom:2px;}
+  .site-nav a.nav-current{color:var(--ink); border-bottom:1.5px solid var(--brass);}
+  .site-nav a:hover{color:var(--brass);}
+  .nav-sep{margin:0 10px; color:var(--line);}
+
+  main{position:relative; z-index:1; max-width:920px; margin:0 auto; padding:52px 24px 20px;}
+
+  .section-heading{font-family:'Fraunces', serif; font-weight:600; font-size:26px; margin:0 0 8px; text-align:center;}
+  .section-sub{font-size:14.5px; color:var(--ink-soft); text-align:center; max-width:560px; margin:0 auto 34px; line-height:1.6;}
+
+  .tool-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin-bottom:60px;}
+  .tool-card{
+    border:1.5px solid var(--ink); background:var(--paper-raised); border-radius:2px; padding:26px 24px;
+    text-decoration:none; color:var(--ink); display:block; transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .tool-card:hover{transform:translateY(-3px); box-shadow:0 6px 0 rgba(28,43,68,0.08);}
+  .tool-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:10px;}
+  .tool-card h3{font-family:'Fraunces', serif; font-weight:600; font-size:19px; margin:0 0 8px;}
+  .tool-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.55; margin:0 0 14px;}
+  .tool-link{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink); border-bottom:1px solid var(--brass); padding-bottom:1px;}
+
+  .more-note{text-align:center; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); margin:-40px 0 60px;}
+
+  .trust-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:32px 40px; margin-bottom:60px; max-width:700px; margin-left:auto; margin-right:auto;}
+  @media (max-width:560px){ .trust-grid{grid-template-columns:1fr;} }
+  .trust-item h4{
+    font-family:'Fraunces', serif; font-weight:600; font-size:16.5px; margin:0 0 8px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .trust-item h4::before{content:""; width:8px; height:8px; background:var(--brass); border-radius:50%; display:inline-block; flex-shrink:0;}
+  .trust-item p{font-size:13.5px; color:var(--ink-soft); line-height:1.6; margin:0; padding-left:16px;}
+
+  .notice-box{
+    border:1.5px dashed var(--ink-soft); border-radius:2px; padding:16px 18px; font-size:13px; line-height:1.6;
+    color:var(--ink-soft); background:var(--paper-raised); margin-bottom:50px;
+  }
+  .notice-box strong{color:var(--ink);}
+
+  footer{border-top:3px solid var(--ink); text-align:center; padding:22px 24px 34px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); position:relative; z-index:1;}
+
+  @media (prefers-reduced-motion: reduce){*{transition:none !important;}}
+
+  .nav-dropdown{position:relative; display:inline-block;}
+  .nav-dropdown-menu{
+    display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    background:var(--paper-raised); border:1.5px solid var(--ink); border-radius:2px;
+    padding:6px 0; margin-top:10px; min-width:170px; z-index:20; text-align:left;
+  }
+  .nav-dropdown-menu a{display:block; padding:7px 16px; white-space:nowrap; font-size:12.5px;}
+  .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu{display:block;}
+  .nav-caret{font-size:9px; margin-left:2px; opacity:0.6;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wordmark">The <em>Catchment</em></div>
+  <h1 class="title">Clear, <em>independent</em> guidance for Ruislip, Eastcote &amp; Harrow families</h1>
+  <p class="subline">Choosing a school shouldn't feel overwhelming. At The Catchment, we help families in Ruislip, Eastcote and Harrow understand admissions, catchments and school pathways — with calm, accurate, genuinely useful information.</p>
+  <p class="tagline">Understand your options. Find your catchment.</p>
+  <nav class="site-nav"><a href="index.html" class="nav-current">Home</a><span class="nav-sep">·</span><span class="nav-dropdown"><a href="primary-schools.html">Primary<span class="nav-caret">▾</span></a><span class="nav-dropdown-menu"><a href="reception-timeline.html">Reception Timeline</a></span></span><span class="nav-sep">·</span><a href="secondary-schools.html">Secondary</a><span class="nav-sep">·</span><span class="nav-dropdown"><a href="grammar-schools.html">Grammar<span class="nav-caret">▾</span></a><span class="nav-dropdown-menu"><a href="buckinghamshire-grammar-schools.html">Buckinghamshire</a><a href="eleven-plus-timeline.html">11+ Key Dates</a></span></span></nav>
+</header>
+
+<main>
+  <h2 class="section-heading">Why The Catchment exists</h2>
+  <p class="section-sub">Choosing a school often means comparing council guidance, admissions policies and advice from friends or online forums. We created The Catchment to bring trusted local information together in one place, so families can make informed decisions with confidence.</p>
+
+  <h2 class="section-heading" style="margin-top:50px;">Where are you in your journey?</h2>
+  <p class="section-sub">Starting school</p>
+
+  <div class="tool-grid">
+    <a class="tool-card" href="primary-schools.html">
+      <div class="tool-eyebrow">Directory</div>
+      <h3>Primary Schools</h3>
+      <p>Verified information for every local primary school across HA4 and HA5.</p>
+      <span class="tool-link">Browse the directory →</span>
+    </a>
+    <a class="tool-card" href="reception-timeline.html">
+      <div class="tool-eyebrow">Interactive tool</div>
+      <h3>Reception Timeline</h3>
+      <p>Calculates every deadline based on your child's start year, with a running countdown and simple tick-off steps.</p>
+      <span class="tool-link">Try the tool →</span>
+    </a>
+  </div>
+
+  <p class="section-sub" style="margin-top:36px;">Looking ahead</p>
+  <div class="tool-grid">
+    <a class="tool-card" href="grammar-schools.html">
+      <div class="tool-eyebrow">Guide</div>
+      <h3>Grammar Catchments</h3>
+      <p>A realistic breakdown of which grammar schools are actually accessible from this area — and how each one's admissions system works.</p>
+      <span class="tool-link">See the breakdown →</span>
+    </a>
+    <a class="tool-card" href="eleven-plus-timeline.html">
+      <div class="tool-eyebrow">Overview</div>
+      <h3>11+ Key Dates</h3>
+      <p>The typical shape of the 11+ year, month by month — registration, tests, results and National Offer Day.</p>
+      <span class="tool-link">See the timeline →</span>
+    </a>
+  </div>
+  <p class="more-note">More guides and tools are being added all the time.</p>
+
+  <h2 class="section-heading">Why parents trust The Catchment</h2>
+  <div class="trust-grid">
+    <div class="trust-item">
+      <h4>Independent</h4>
+      <p>We're parent-built and not affiliated with any school, council or admissions authority. Paid placement may exist one day — but it will never change what we say.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Accurate</h4>
+      <p>Every guide is checked against official council and school sources. If something changes, we update it.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Local</h4>
+      <p>We focus on HA4 and HA5 because that's where families need clarity the most — not generic national advice.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Calm</h4>
+      <p>Admissions can feel high-stakes and urgent. We try to make it feel manageable instead — plain explanations, delivered without drama, so you can think clearly rather than panic.</p>
+    </div>
+  </div>
+
+  <div class="notice-box">
+    <strong>A note on scope:</strong> we currently cover the HA4 and HA5 postcode districts — Ruislip, Eastcote, and the Pinner/Hatch End edge of Harrow. We're expanding carefully, area by area, rather than promising more than we've actually verified.
+  </div>
+</main>
+
+<footer>
+  Ruislip · Eastcote · Harrow — a parent-built local resource, not affiliated with any school or local authority.
+</footer>
+
+</body>
+</html>
