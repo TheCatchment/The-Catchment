@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL8MBTCK7Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DL8MBTCK7Q');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Catchment — Secondary Schools of Ruislip, Eastcote &amp; Harrow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2b44;
+    --ink-soft:#3a4a63;
+    --paper:#efead8;
+    --paper-raised:#f7f4e9;
+    --brass:#a9812e;
+    --brass-dim:#c9a75a;
+    --brick:#8b3a3a;
+    --line: rgba(28,43,68,0.16);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(28,43,68,0.05) 1px, transparent 0);
+    background-size:22px 22px;
+    pointer-events:none;
+    z-index:0;
+  }
+
+  a{color:var(--ink);}
+
+  /* ---------- Header / masthead ---------- */
+  header.masthead{
+    position:relative; z-index:1;
+    border-bottom:3px solid var(--ink);
+    padding:38px 24px 22px;
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--brick);
+    margin-bottom:10px;
+  }
+  h1.title{
+    font-family:'Fraunces', serif;
+    font-optical-sizing:auto;
+    font-weight:600;
+    font-size:clamp(34px,6vw,58px);
+    line-height:1.02;
+    margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+  h1.title em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--brass);
+  }
+  .subline{
+    font-size:15px;
+    color:var(--ink-soft);
+    max-width:560px;
+    margin:0 auto;
+    line-height:1.55;
+  }
+  .districts{
+    margin-top:18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+  }
+  .districts span{
+    display:inline-block;
+    border:1px solid var(--line);
+    padding:3px 9px;
+    margin:0 3px;
+    border-radius:2px;
+  }
+  .site-nav{
+    margin-top:20px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.03em;
+  }
+  .site-nav a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    padding-bottom:2px;
+  }
+  .site-nav a.nav-current{
+    color:var(--ink);
+    border-bottom:1.5px solid var(--brass);
+  }
+  .site-nav a:hover{color:var(--brass);}
+  .nav-sep{margin:0 10px; color:var(--line);}
+
+  /* ---------- Controls ---------- */
+  .controls{
+    position:relative; z-index:1;
+    max-width:980px;
+    margin:34px auto 0;
+    padding:0 24px;
+  }
+  .search-row{
+    display:flex;
+    gap:10px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+  }
+  input[type="text"]{
+    flex:1 1 260px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    background:var(--paper-raised);
+    border:1.5px solid var(--ink);
+    padding:12px 14px;
+    color:var(--ink);
+    outline:none;
+    border-radius:2px;
+  }
+  input[type="text"]::placeholder{color:#8b8368;}
+  input[type="text"]:focus{
+    border-color:var(--brass);
+    box-shadow:0 0 0 3px rgba(169,129,46,0.18);
+  }
+
+  .plaque-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .plaque{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    background:var(--ink);
+    color:var(--paper);
+    border:none;
+    padding:8px 14px;
+    border-radius:2px;
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease, transform .1s ease;
+  }
+  .plaque:hover{transform:translateY(-1px);}
+  .plaque.active{
+    background:var(--brass);
+    color:var(--ink);
+  }
+  .plaque.ghost{
+    background:transparent;
+    color:var(--ink);
+    border:1.5px solid var(--ink);
+  }
+  .plaque.ghost.active{
+    background:var(--ink);
+    color:var(--paper);
+    border-color:var(--ink);
+  }
+
+  .result-count{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin:16px 2px 8px;
+    display:flex;
+    justify-content:space-between;
+  }
+
+  /* ---------- Register / list ---------- */
+  main{
+    position:relative; z-index:1;
+    max-width:980px;
+    margin:0 auto 60px;
+    padding:0 24px;
+  }
+  .register{
+    border-top:1.5px solid var(--ink);
+  }
+  .entry{
+    display:grid;
+    grid-template-columns:64px 1fr auto;
+    gap:18px;
+    align-items:start;
+    padding:20px 4px;
+    border-bottom:1px solid var(--line);
+    transition:background .15s ease;
+  }
+  .entry:hover{background:var(--paper-raised);}
+  .entry-no{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--brass);
+    padding-top:4px;
+  }
+  .entry-body h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:19px;
+    margin:0 0 5px;
+    line-height:1.25;
+  }
+  .entry-meta{
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+  .entry-meta .addr{display:block;}
+  .tag-row{margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;}
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:2px;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+  .tag.phase-primary{border-color:var(--brass-dim); color:#7a5f1e;}
+  .tag.phase-secondary{border-color:var(--brick); color:var(--brick);}
+  .tag.phase-independent{border-color:var(--ink); color:var(--ink);}
+  .entry-link{
+    align-self:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    white-space:nowrap;
+    text-decoration:none;
+    color:var(--ink);
+    border-bottom:1px solid var(--brass);
+    padding-bottom:1px;
+  }
+  .entry-link:hover{color:var(--brass);}
+  .no-results{
+    padding:40px 4px;
+    text-align:center;
+    color:var(--ink-soft);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+  }
+
+  /* ---------- Notice ---------- */
+  .notice{
+    max-width:980px;
+    margin:0 auto 40px;
+    padding:0 24px;
+    position:relative; z-index:1;
+  }
+  .notice-box{
+    border:1.5px dashed var(--ink-soft);
+    border-radius:2px;
+    padding:16px 18px;
+    font-size:13px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    background:var(--paper-raised);
+  }
+  .notice-box strong{color:var(--ink);}
+  .notice-box a{color:var(--brass); border-bottom:1px solid var(--brass); text-decoration:none;}
+
+  footer{
+    border-top:3px solid var(--ink);
+    text-align:center;
+    padding:22px 24px 34px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    letter-spacing:0.04em;
+    position:relative; z-index:1;
+  }
+
+  @media (max-width:600px){
+    .entry{grid-template-columns:32px 1fr; }
+    .entry-link{grid-column:2; margin-top:6px;}
+  }
+
+  :focus-visible{outline:2px solid var(--brass); outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+
+  .nav-dropdown{position:relative; display:inline-flex; align-items:center;}
+  .nav-caret-btn{
+    background:none; border:none; padding:0 0 0 2px; margin:0;
+    font-family:'IBM Plex Mono', monospace; font-size:9px; color:var(--ink-soft);
+    cursor:pointer; opacity:0.7; line-height:1;
+  }
+  .nav-caret-btn:hover, .nav-caret-btn[aria-expanded="true"]{opacity:1; color:var(--brass);}
+  .nav-dropdown-menu{
+    display:none; position:absolute; top:100%; right:0; left:auto;
+    background:var(--paper-raised); border:1.5px solid var(--ink); border-radius:2px;
+    padding:14px 0 6px; margin-top:0; min-width:190px; z-index:20; text-align:left;
+  }
+  .nav-dropdown-menu a{display:block; padding:7px 16px; white-space:nowrap; font-size:12.5px;}
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown-menu.open,
+  .nav-dropdown:focus-within .nav-dropdown-menu{display:block;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="eyebrow">The Education Guide for HA4 &amp; HA5</div>
+  <h1 class="title">Secondary <em>Schools</em></h1>
+  <p class="subline">The state secondary schools that Ruislip, Eastcote and Pinner/Hatch End families actually choose between — not strictly bound to HA4/HA5, but where local families realistically go.</p>
+  <div class="districts"><span>HA4</span><span>HA5</span></div>
+  <nav class="site-nav"><a href="index.html">Home</a><span class="nav-sep">·</span><span class="nav-dropdown"><a href="primary-schools.html">Primary</a><button class="nav-caret-btn" aria-expanded="false" aria-controls="primary-menu" aria-label="Show Primary submenu">▾</button><span class="nav-dropdown-menu" id="primary-menu"><a href="primary-schools.html">All Primary Schools</a><a href="reception-timeline.html">Reception Timeline</a><a href="reception-distance-trends.html">Distance Trends</a></span></span><span class="nav-sep">·</span><a href="secondary-schools.html" class="nav-current">Secondary</a><span class="nav-sep">·</span><span class="nav-dropdown"><a href="grammar-schools.html">Grammar</a><button class="nav-caret-btn" aria-expanded="false" aria-controls="grammar-menu" aria-label="Show Grammar submenu">▾</button><span class="nav-dropdown-menu" id="grammar-menu"><a href="grammar-schools.html">All Grammar Schools</a><a href="buckinghamshire-grammar-schools.html">Buckinghamshire</a><a href="sw-herts-grammar-schools.html">SW Herts</a><a href="eleven-plus-timeline.html">11+ Key Dates</a></span></span></nav>
+</header>
+
+<div class="controls">
+  <div class="search-row">
+    <input type="text" id="search" placeholder="Search by school name…">
+  </div>
+  <div class="plaque-row" id="area-filters"></div>
+  <div class="result-count"><span id="count-label"></span><span>sorted A–Z</span></div>
+</div>
+
+<main>
+  <div class="register" id="register"></div>
+</main>
+
+<div class="notice">
+  <div class="notice-box">
+    <strong>Before you rely on this list:</strong> Ofsted ratings, catchment/admissions distances and sixth form provision change often. This directory gives you names, areas and a starting point — always confirm current details on
+    <a href="https://reports.ofsted.gov.uk/" target="_blank" rel="noopener">Ofsted's own site</a> and
+    <a href="https://www.compare-school-performance.service.gov.uk/" target="_blank" rel="noopener">Compare School Performance (GOV.UK)</a>, or with the school directly, before making a decision.
+  </div>
+  <div class="notice-box" style="margin-top:16px;">
+    <strong>A note on scope:</strong> unlike our primary directory, this list isn't bound strictly to the HA4/HA5 postcode districts. Secondary choice for this area routinely includes two schools just outside it — Vyners School (Ickenham, UB10) and Northwood School (HA6) — both of which appear on the Ruislip Residents' Association's own list of local secondary options. Conversely, some schools that sit geographically closer on a map (Rooks Heath, Whitmore High — both HA2, and Hatch End High School, HA3, despite the name) don't come up in local parent discussion of this area, so we've left them out. This is based on community sources (the Ruislip Residents' Association, local parent forums) rather than a formal survey, and may not reflect every family's experience.
+  </div>
+  <div class="notice-box" style="margin-top:16px; border-style:solid;">
+    <strong>Visiting before you apply?</strong> <a href="open-evenings.html">See upcoming open evenings across every school on this list →</a>
+  </div>
+</div>
+
+<footer>
+  Ruislip · Eastcote · Harrow — a parent-built local resource, not affiliated with any school or local authority.
+</footer>
+
+<script>
+const schools = [
+  {name:"Ruislip High School", area:"Ruislip", phase:"secondary", tag:"Outstanding", note:"Ofsted: Outstanding, all 5 categories (Jan 2024)", addr:"Sidmouth Drive, Ruislip, HA4 0BY", url:"https://www.ruisliphigh.com/"},
+  {name:"Queensmead School", area:"Ruislip", phase:"secondary", tag:"Good", openDay:"Wed 16 Sept 2026, 4–7.30pm (Year 7)", note:"Ofsted: Good (July 2022, previously Outstanding 2008)", addr:"Queens Walk, South Ruislip, HA4 0LS", url:"https://www.queensmeadschool.org.uk/"},
+  {name:"Bishop Ramsey Church of England School", area:"Ruislip", phase:"secondary", tag:"Good", note:"Church of England · Ofsted: Good in all areas (19 November 2024)", addr:"Hume Way, Ruislip, HA4 8EE", url:"https://www.bishopramseyschool.org/"},
+
+  {name:"Haydon School", area:"Eastcote", phase:"secondary", tag:"Good", openDay:"Thu 17 Sept 2026, 6–8pm (Year 6)", note:"Ofsted: Good, all 5 categories (Oct 2022)", addr:"Wiltshire Lane, Eastcote, Pinner, HA5 2LX", url:"http://www.haydonschool.com/"},
+
+  {name:"Nower Hill High School", area:"Harrow", phase:"secondary", tag:"Outstanding", note:"Ofsted: Outstanding", addr:"George V Avenue, Pinner, HA5 5RP", url:"https://www.nowerhill.org.uk/"},
+  {name:"Pinner High School", area:"Harrow", phase:"secondary", tag:"Outstanding", openDay:"Open Evening Thu 1 Oct 2026, 4–7.30pm; Open Morning Mon 5 Oct, 9am &amp; 11am (Year 7)", note:"Free school · Ofsted: Outstanding, all 5 categories (Mar 2025) · SEND resource provision (ASD)", addr:"Beaulieu Drive, Pinner, HA5 1NB", url:"http://www.pinnerhighschool.org/"},
+
+  {name:"Vyners School", area:"Ickenham", phase:"secondary", tag:"Outstanding", openDay:"Wed 23 Sept 2026, ticketed entry 4.30–6pm or 6–7.30pm (Year 6, plus Year 5 EHCP)", note:"Ofsted: Outstanding (last full inspection 2019; standards maintained, ungraded 2025 inspection) · often the most sought-after option locally", addr:"Warren Road, Ickenham, UB10 8AB", url:"http://www.vynersschool.org.uk/"},
+  {name:"Northwood School", area:"Northwood", phase:"secondary", tag:"Outstanding", note:"Ofsted: Outstanding (2018; maintained per Oct 2024 monitoring inspection)", addr:"Pinner Road, Northwood, HA6 1QN", url:"http://www.northwoodschool.org.uk/"},
+];
+
+const areas = ["All", "Ruislip", "Eastcote", "Harrow", "Ickenham", "Northwood"];
+
+schools.sort((a,b)=>a.name.localeCompare(b.name));
+
+let state = { area:"All", q:"" };
+
+function buildFilters(){
+  const areaWrap = document.getElementById('area-filters');
+  areaWrap.innerHTML = '';
+  areas.forEach(a=>{
+    const btn = document.createElement('button');
+    btn.className = 'plaque' + (state.area===a ? ' active' : '');
+    btn.textContent = a;
+    btn.addEventListener('click', ()=>{ state.area = a; render(); });
+    areaWrap.appendChild(btn);
+  });
+}
+
+function render(){
+  buildFilters();
+  const q = state.q.trim().toLowerCase();
+  const filtered = schools.filter(s=>{
+    const areaMatch = state.area === "All" || s.area === state.area;
+    const qMatch = !q || s.name.toLowerCase().includes(q);
+    return areaMatch && qMatch;
+  });
+
+  document.getElementById('count-label').textContent =
+    filtered.length + (filtered.length === 1 ? ' school listed' : ' schools listed');
+
+  const reg = document.getElementById('register');
+  if(filtered.length === 0){
+    reg.innerHTML = '<div class="no-results">No schools match that search. Try clearing a filter.</div>';
+    return;
+  }
+
+  reg.innerHTML = filtered.map((s,i)=>{
+    const num = String(i+1).padStart(2,'0');
+    const govUrl = 'https://www.compare-school-performance.service.gov.uk/schools-by-name?SchoolName=' + encodeURIComponent(s.name.replace(/&amp;/g,'and'));
+    const link = s.url ? s.url : govUrl;
+    const linkLabel = s.url ? 'School website →' : 'Look up →';
+    return `
+      <div class="entry">
+        <div class="entry-no">${num}</div>
+        <div class="entry-body">
+          <h3>${s.name}</h3>
+          <div class="entry-meta">
+            <span class="addr">${s.addr}</span>
+            ${s.note ? `<span>${s.note}</span>` : ''}
+          </div>
+          ${s.openDay ? `<div class="tag-row"><span class="tag" style="border-color:var(--brass); color:var(--brass); font-weight:600;">Open day: ${s.openDay}</span></div>` : ''}
+          <div class="tag-row">
+            <span class="tag">${s.area}</span>
+            ${s.tag ? `<span class="tag">${s.tag}</span>` : ''}
+          </div>
+        </div>
+        <a class="entry-link" href="${link}" target="_blank" rel="noopener">${linkLabel}</a>
+      </div>
+    `;
+  }).join('');
+}
+
+document.getElementById('search').addEventListener('input', (e)=>{
+  state.q = e.target.value;
+  render();
+});
+
+render();
+</script>
+
+
+<script>
+document.querySelectorAll('.nav-caret-btn').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var menu = btn.nextElementSibling;
+    var isOpen = menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); });
+    document.querySelectorAll('.nav-caret-btn').forEach(function(b){ b.setAttribute('aria-expanded','false'); });
+    if(!isOpen){
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  });
+});
+document.addEventListener('click', function(){
+  document.querySelectorAll('.nav-dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); });
+  document.querySelectorAll('.nav-caret-btn').forEach(function(b){ b.setAttribute('aria-expanded','false'); });
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    document.querySelectorAll('.nav-dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); });
+    document.querySelectorAll('.nav-caret-btn').forEach(function(b){ b.setAttribute('aria-expanded','false'); });
+  }
+});
+</script>
+</body>
+</html>
