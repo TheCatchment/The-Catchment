@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL8MBTCK7Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DL8MBTCK7Q');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — The Catchment</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2b44; --ink-soft:#3a4a63; --paper:#efead8; --paper-raised:#f7f4e9;
+    --brass:#a9812e; --brass-dim:#c9a75a; --brick:#8b3a3a; --line: rgba(28,43,68,0.16);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; -webkit-font-smoothing:antialiased;}
+  body::before{content:""; position:fixed; inset:0; background-image:radial-gradient(circle at 1px 1px, rgba(28,43,68,0.05) 1px, transparent 0); background-size:22px 22px; pointer-events:none; z-index:0;}
+  a{color:var(--ink);}
+
+  header.masthead{position:relative; z-index:5; border-bottom:3px solid var(--ink); padding:38px 24px 22px; text-align:center;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--brick); margin-bottom:10px;}
+  h1.title{font-family:'Fraunces', serif; font-weight:600; font-size:clamp(32px,5.5vw,52px); line-height:1.02; margin:0 0 8px; letter-spacing:-0.01em;}
+  h1.title em{font-style:italic; font-weight:500; color:var(--brass);}
+  .subline{font-size:15px; color:var(--ink-soft); max-width:580px; margin:0 auto; line-height:1.55;}
+  .site-nav{margin-top:18px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.03em;}
+  .site-nav a{text-decoration:none; color:var(--ink-soft); padding-bottom:2px;}
+  .site-nav a.nav-current{color:var(--ink); border-bottom:1.5px solid var(--brass);}
+  .site-nav a:hover{color:var(--brass);}
+  .nav-sep{margin:0 10px; color:var(--line);}
+
+  main{position:relative; z-index:1; max-width:820px; margin:0 auto; padding:44px 24px 60px;}
+
+  .intro{font-size:15px; color:var(--ink-soft); line-height:1.65; max-width:600px; margin:0 auto 40px; text-align:center;}
+
+  .contact-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:18px; margin-bottom:44px;}
+  .contact-card{
+    border:1.5px solid var(--ink); background:var(--paper-raised); border-radius:2px; padding:26px 22px;
+    text-decoration:none; color:var(--ink); display:block; transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .contact-card:hover{transform:translateY(-3px); box-shadow:0 6px 0 rgba(28,43,68,0.08);}
+  .contact-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:10px;}
+  .contact-card h3{font-family:'Fraunces', serif; font-weight:600; font-size:19px; margin:0 0 8px; line-height:1.25;}
+  .contact-card p{font-size:13px; color:var(--ink-soft); line-height:1.55; margin:0 0 14px;}
+  .contact-link{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink); border-bottom:1px solid var(--brass); padding-bottom:1px;}
+
+  .general-box{
+    border:1.5px dashed var(--ink-soft); border-radius:2px; padding:22px 26px; text-align:center;
+    background:var(--paper-raised); margin-bottom:40px;
+  }
+  .general-box h2{font-family:'Fraunces', serif; font-weight:600; font-size:20px; margin:0 0 8px;}
+  .general-box p{font-size:13.5px; color:var(--ink-soft); margin:0 0 14px; line-height:1.55;}
+  .contact-form{display:flex; flex-direction:column; gap:10px; max-width:420px; margin:0 auto;}
+  .contact-form input, .contact-form textarea{
+    font-family:'IBM Plex Sans', sans-serif; font-size:14px; padding:11px 13px;
+    border:1.5px solid var(--ink); border-radius:2px; background:var(--paper); color:var(--ink);
+    resize:vertical;
+  }
+  .contact-form input:focus, .contact-form textarea:focus{outline:2px solid var(--brass); outline-offset:1px;}
+  .contact-form button{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase;
+    background:var(--ink); color:var(--paper-raised); border:none; border-radius:2px; padding:12px 20px;
+    cursor:pointer; transition:background .15s ease;
+  }
+  .contact-form button:hover{background:var(--brass);}
+  .form-note{font-size:12px; color:var(--ink-soft); margin:6px 0 0; text-align:center;}
+  .email-link{
+    font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--ink); font-weight:500;
+    border-bottom:1.5px solid var(--brass); padding-bottom:2px; text-decoration:none;
+  }
+  .email-link:hover{color:var(--brass);}
+
+  .notice-box{
+    border:1.5px dashed var(--ink-soft); border-radius:2px; padding:16px 18px; font-size:13px; line-height:1.6;
+    color:var(--ink-soft); background:var(--paper-raised);
+  }
+  .notice-box strong{color:var(--ink);}
+
+  footer{border-top:3px solid var(--ink); text-align:center; padding:22px 24px 34px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); position:relative; z-index:1;}
+  footer a{color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line);}
+  footer a:hover{color:var(--brass); border-color:var(--brass);}
+
+  @media (prefers-reduced-motion: reduce){*{transition:none !important;}}
+
+  .nav-dropdown{position:relative; display:inline-flex; align-items:center;}
+  .nav-caret-btn{
+    background:none; border:none; padding:0 0 0 2px; margin:0;
+    font-family:'IBM Plex Mono', monospace; font-size:9px; color:var(--ink-soft);
+    cursor:pointer; opacity:0.7; line-height:1;
+  }
+  .nav-caret-btn:hover, .nav-caret-btn[aria-expanded="true"]{opacity:1; color:var(--brass);}
+  .nav-dropdown-menu{
+    display:none; position:absolute; top:100%; right:0; left:auto;
+    background:var(--paper-raised); border:1.5px solid var(--ink); border-radius:2px;
+    padding:14px 0 6px; margin-top:0; min-width:190px; z-index:20; text-align:left;
+  }
+  .nav-dropdown-menu a{display:block; padding:7px 16px; white-space:nowrap; font-size:12.5px;}
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown-menu.open,
+  .nav-dropdown:focus-within .nav-dropdown-menu{display:block;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="eyebrow">The Education Guide for HA4 &amp; HA5</div>
+  <h1 class="title">Get in <em>Touch</em></h1>
+  <p class="subline">Whatever brings you here, we'd like to hear from you.</p>
+  <nav class="site-nav"><a href="index.html">Home</a><span class="nav-sep">·</span><span class="nav-dropdown"><a href="primary-schools.html">Primary</a><button class="nav-caret-btn" aria-expanded="false" aria-controls="primary-menu" aria-label="Show Primary submenu">▾</button><span class="nav-dropdown-menu" id="primary-menu"><a href="primary-schools.html">All Primary Schools</a><a href="reception-timeline.html">Reception Timeline</a><a href="reception-distance-trends.html">Distance Trends</a></span></span><span class="nav-sep">·</span><a href="secondary-schools.html">Secondary</a><span class="nav-sep">·</span><span class="nav-dropdown"><a href="grammar-schools.html">Grammar</a><button class="nav-caret-btn" aria-expanded="false" aria-controls="grammar-menu" aria-label="Show Grammar submenu">▾</button><span class="nav-dropdown-menu" id="grammar-menu"><a href="grammar-schools.html">All Grammar Schools</a><a href="buckinghamshire-grammar-schools.html">Buckinghamshire</a><a href="sw-herts-grammar-schools.html">SW Herts</a><a href="eleven-plus-timeline.html">11+ Key Dates</a></span></span><span class="nav-sep">·</span><a href="contact.html" class="nav-current">Contact</a></nav>
+</header>
+
+<main>
+
+  <p class="intro">Every message is read and answered personally — tell us a bit about why you're reaching out and we'll get back to you.</p>
+
+  <div class="contact-grid">
+    <a class="contact-card" href="mailto:hello@thecatchment.co.uk?subject=Need%20advice">
+      <div class="contact-eyebrow">Ask us</div>
+      <h3>Need advice?</h3>
+      <p>Got a specific admissions or catchment question that isn't answered on the site? Ask us directly.</p>
+      <span class="contact-link">Reach out →</span>
+    </a>
+    <a class="contact-card" href="mailto:hello@thecatchment.co.uk?subject=New%20to%20the%20area">
+      <div class="contact-eyebrow">Just moved?</div>
+      <h3>New to the area?</h3>
+      <p>Settling into Ruislip, Eastcote or Harrow and not sure where to start? We're happy to point you in the right direction.</p>
+      <span class="contact-link">Reach out →</span>
+    </a>
+    <a class="contact-card" href="mailto:hello@thecatchment.co.uk?subject=Thinking%20of%20moving%20for%20grammars">
+      <div class="contact-eyebrow">Considering a move?</div>
+      <h3>Thinking of moving for grammars?</h3>
+      <p>Weighing a move for Buckinghamshire, SW Herts or Barnet grammar access? Ask us what our guides don't cover.</p>
+      <span class="contact-link">Reach out →</span>
+    </a>
+  </div>
+
+  <div class="general-box">
+    <h2>Something else</h2>
+    <p>Schools, partnerships, press, or just want to say hello — drop us a message below.</p>
+    <form class="contact-form" action="https://formspree.io/f/xvkpaypo" method="POST">
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+      <button type="submit">Send message</button>
+      <p class="form-note">Or email us directly: <a class="email-link" href="mailto:hello@thecatchment.co.uk">hello@thecatchment.co.uk</a></p>
+    </form>
+  </div>
+
+  <div class="notice-box">
+    <strong>Independent, always.</strong> The Catchment isn't affiliated with any school, council, or admissions authority. Nothing you tell us, and no partnership we ever take on, changes what we say about a school.
+  </div>
+
+</main>
+
+<footer>
+  Ruislip · Eastcote · Harrow — a parent-built local resource, not affiliated with any school or local authority.<br>
+  <a href="sitemap.html">Sitemap</a> · <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+document.querySelectorAll('.nav-caret-btn').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var menu = btn.nextElementSibling;
+    var isOpen = menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); });
+    document.querySelectorAll('.nav-caret-btn').forEach(function(b){ b.setAttribute('aria-expanded','false'); });
+    if(!isOpen){
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  });
+});
+document.addEventListener('click', function(){
+  document.querySelectorAll('.nav-dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); });
+  document.querySelectorAll('.nav-caret-btn').forEach(function(b){ b.setAttribute('aria-expanded','false'); });
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    document.querySelectorAll('.nav-dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); });
+    document.querySelectorAll('.nav-caret-btn').forEach(function(b){ b.setAttribute('aria-expanded','false'); });
+  }
+});
+</script>
+
+<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="db59a588-7ed7-44f9-b1b3-4891213e0837"></script>
+</body>
+</html>
